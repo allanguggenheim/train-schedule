@@ -12,19 +12,16 @@
 	var database= firebase.database();
 	var trains = database.ref();
 
-function deleteTrain(trainName) {
 
-console.log(trains);
-
-  trains.child(trainName).remove().then(function() {
+function deleteTrain(trainKey) {
+  console.log(trains);
+  trains.child(trainKey).remove().then(function() {
     // Code after remove
   });
-
-
 	//Prevents moving to new page
 	return false;
-
 };
+
 
 $(document).ready(function(){ 
 
